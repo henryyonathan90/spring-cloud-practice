@@ -1,3 +1,4 @@
 1. Running spring boot application and connect to local consul agent
 2. Create bootstrap properties required to connect to config server, move all other properties there
 3. Mark spring bean with @RefreshScope so it can fetch new value from config server when triggered with post to /refresh
+4. Change from config server/client to consul KV for configuration properties

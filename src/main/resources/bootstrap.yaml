@@ -1,0 +1,19 @@
+spring:
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      config:
+        enabled: true
+        prefix: config
+        defaultContext: apps
+        profile-separator: '::'
+  application:
+    name: spring-cloud-practice
+
+
+#Below is sequence of  key read from consul KV
+#config/spring-cloud-practice::dev/
+#config/spring-cloud-practice/
+#config/apps::dev/
+#config/apps/
