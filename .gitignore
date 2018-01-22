@@ -20,3 +20,5 @@ dependency-reduced-pom.xml
 *.classpath
 *.project
 *.orig
+
+target/*
