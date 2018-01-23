@@ -8,12 +8,15 @@ spring:
         prefix: config
         defaultContext: apps
         profile-separator: '::'
-  application:
-    name: spring-cloud-practice
+        format: files
 
-
-#Below is sequence of  key read from consul KV
+#Below is sequence of read from consul KV
 #config/spring-cloud-practice::dev/
 #config/spring-cloud-practice/
 #config/apps::dev/
 #config/apps/
+
+  application:
+    name: spring-cloud-practice
+
+
