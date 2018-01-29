@@ -17,3 +17,15 @@ spring:
         consul:
             discovery:
                 service-name: spring-cloud-practice
+
+#Below is sequence of read from consul KV (depend on config, format value)
+#config/spring-cloud-practice::dev/
+#config/spring-cloud-practice/
+#config/apps::dev/
+#config/apps/
+
+#Below is sequence of read from consul KV (depend on config, format files)
+#config/spring-cloud-practice::dev.yml
+#config/spring-cloud-practice.yml
+#config/apps::dev.yml
+#config/apps.yml
