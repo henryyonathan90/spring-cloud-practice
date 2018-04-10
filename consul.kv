@@ -1,3 +1,10 @@
+Below is sequence of read from consul KV
+config/spring-cloud-practice::dev/
+config/spring-cloud-practice/
+config/apps::dev/
+config/apps/
+*format = [spring.cloud.consul.config.prefix]/[spring.application.name][spring.cloud.consul.config.profile-separator][profile]/
+
 KEY VALUE SCRIPT:
 consul kv put config/spring-cloud-practice/message Mantabs3
 consul kv put config/spring-cloud-practice/test/message Muantabs3
@@ -17,6 +24,14 @@ spring:
         consul:
             discovery:
                 service-name: spring-cloud-practice
+management:
+    security:
+        enabled: false
+feign:
+    client:
+        calendar:
+            name: Calendar
+            url: http://172.17.138.22:8080/calendar
 
 #Below is sequence of read from consul KV (depend on config, format value)
 #config/spring-cloud-practice::dev/

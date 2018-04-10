@@ -20,13 +20,13 @@ public class HelloController {
   @Autowired
   private TestProperties testProperties;
 
-  @GetMapping("api1")
+  @GetMapping("hello/api1")
   public String api1() {
     return message;
   }
 
 
-  @GetMapping("api2")
+  @GetMapping("hello/api2")
   public String api2() {
     return testProperties.getMessage();
   }

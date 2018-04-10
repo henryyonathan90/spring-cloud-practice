@@ -9,14 +9,11 @@ spring:
         defaultContext: apps
         profile-separator: '::'
         format: files
-
-#Below is sequence of read from consul KV
-#config/spring-cloud-practice::dev/
-#config/spring-cloud-practice/
-#config/apps::dev/
-#config/apps/
+      discovery:
+        service-name: practice
 
   application:
     name: spring-cloud-practice
+
 
 

@@ -46,7 +46,7 @@
     </appender>
 
 
-    <logger name="org.springframework" level="info" additivity="false">
+    <logger name="org.springframework" level="debug" additivity="false">
         <appender-ref ref="SPRING"/>
         <appender-ref ref="ALL"/>
         <appender-ref ref="STDOUT"/>
