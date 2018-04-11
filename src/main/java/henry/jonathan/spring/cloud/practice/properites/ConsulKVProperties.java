@@ -12,6 +12,6 @@ import org.springframework.stereotype.Component;
 @Component
 @RefreshScope
 @Data
-public class TestProperties {
+public class ConsulKVProperties {
   private String message;
 }

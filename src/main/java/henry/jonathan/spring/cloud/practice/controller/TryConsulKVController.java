@@ -1,6 +1,6 @@
 package henry.jonathan.spring.cloud.practice.controller;
 
-import henry.jonathan.spring.cloud.practice.properites.TestProperties;
+import henry.jonathan.spring.cloud.practice.properites.ConsulKVProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -12,13 +12,13 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RefreshScope
 @RestController
-public class HelloController {
+public class TryConsulKVController {
 
   @Value("${message}")
   private String message;
 
   @Autowired
-  private TestProperties testProperties;
+  private ConsulKVProperties consulKVProperties;
 
   @GetMapping("hello/api1")
   public String api1() {
@@ -28,6 +28,6 @@ public class HelloController {
 
   @GetMapping("hello/api2")
   public String api2() {
-    return testProperties.getMessage();
+    return consulKVProperties.getMessage();
   }
 }

@@ -2,7 +2,7 @@ package henry.jonathan.spring.cloud.practice.controller;
 
 import henry.jonathan.spring.cloud.practice.model.Calendar;
 import henry.jonathan.spring.cloud.practice.model.RestResponse;
-import henry.jonathan.spring.cloud.practice.outbound.feign.CalendarFeign;
+import henry.jonathan.spring.cloud.practice.outbound.feign.PropertyBasedFeign;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,12 +14,12 @@ import java.util.Map;
  * Created by henry.jonathan on 4/9/2018
  */
 @RestController
-public class CalendarFeignController {
+public class TryFeignPropertyBasedController {
 
   @Autowired
-  private CalendarFeign calendarFeign;
+  private PropertyBasedFeign propertyBasedFeign;
 
-  @GetMapping("api/calendar/find")
+  @GetMapping("api/property/based/feign/find")
   public RestResponse<Calendar> getCalendarByName() {
 
     Map<String, Object> requestParam = new HashMap<>();
@@ -32,6 +32,6 @@ public class CalendarFeignController {
     requestParam.put("page", 0);
     requestParam.put("size", 1000);
 
-    return calendarFeign.getCalendarByName(requestParam);
+    return propertyBasedFeign.getCalendarByName(requestParam);
   }
 }

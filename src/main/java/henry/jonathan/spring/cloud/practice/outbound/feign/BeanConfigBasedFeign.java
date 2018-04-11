@@ -12,9 +12,9 @@ import java.util.Map;
 /**
  * Created by henry.jonathan on 4/9/2018
  */
-@FeignClient(name = "calendar", url = "${feign.client.calendar.url}")
-public interface CalendarFeign {
+@FeignClient(name = "calendar", configuration = CalendarFeignConfiguration.class)
+public interface BeanConfigBasedFeign {
 
-  @RequestMapping(method = RequestMethod.GET, value = "/api/holiday/getCalendarByName")
+  @RequestMapping(method = RequestMethod.GET, value = "api/holiday/getCalendarByName")
   RestResponse<Calendar> getCalendarByName(@RequestParam Map<String, Object> requestParam);
 }

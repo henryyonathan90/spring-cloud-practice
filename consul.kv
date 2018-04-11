@@ -29,9 +29,13 @@ management:
         enabled: false
 feign:
     client:
-        calendar:
-            name: Calendar
-            url: http://172.17.138.22:8080/calendar
+        config:
+            calendar:
+                url: http://172.17.138.22:8080/calendar
+                connectTimeout: 5000
+                readTimeout: 5000
+                loggerLevel: FULL
+
 
 #Below is sequence of read from consul KV (depend on config, format value)
 #config/spring-cloud-practice::dev/

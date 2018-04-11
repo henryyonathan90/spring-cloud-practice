@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * Created by henry.jonathan on 1/29/2018
  */
-@RestController("counter")
+@RestController
 public class CounterController {
 
   private int counter = 0;
